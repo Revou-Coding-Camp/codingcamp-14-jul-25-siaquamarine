@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>My Website - Aqua Portfolio</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+        /* Header layout */
+        header.header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 20px;
+            background-color: #f0f0f0;
+        }
+
+        /* Container tulisan + gambar */
+        .header-title {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .header-title h1 {
+            margin: 0;
+            font-weight: bold;
+            font-size: 1.8em;
+        }
+
+        /* Gambar bundar (frame bulat) */
+        .header-title img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid #00796b;
+        }
+
+        /* Navigasi tombol */
+        nav {
+            display: flex;
+            gap: 10px;
+        }
+
+        nav button {
+            background-color: #00796b;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+            transition: background-color 0.3s ease;
+        }
+
+        nav button:hover {
+            background-color: #004d40;
+        }
+
+        nav button:focus {
+            outline: none;
+        }
+    </style>
+</head>
+<body>
+
+<header class="header">
+    <div class="header-title">
+        <img src="hallo.jpg" alt="Logo" />
+        <h1>Aqua Portfolio</h1>
+    </div>
+    <nav>
+        <button onclick="document.getElementById('my-profile').scrollIntoView({behavior:'smooth'})">My Profile</button>
+        <button onclick="document.getElementById('message-for-me').scrollIntoView({behavior:'smooth'})">Message for me</button>
+    </nav>
+</header>
+
+<hr style="border: 1px solid #1b1a1a;" />
+
+<!-- Fixed vertical lines -->
+<div style="position: fixed; top: 0; left: 0; width: 4px; height: 100vh; background: #000807; z-index: 999;"></div>
+<div style="position: fixed; top: 0; right: 0; width: 4px; height: 100vh; background: #000b0a; z-index: 999;"></div>
+
+<main>
+    <section class="greeting">
+        <h2>Hi there, Welcome To Website</h2>
+        <p>Selamat datang di portofolio saya, kedepanya saya akan mengunggah karya-karya saya disini. Saya berharap Anda menikmati karya ini dan memberikan umpan balik yang konstruktif.</p>
+        <div class="image-container">
+            <img src="logo.jpg" alt="Gambar Contoh" class="image-class" style="max-width:100%; height:auto; display:block; margin:auto;" />
+        </div>
+    </section>
+
+    <section id="my-profile" class="headquarter" style="margin-top: 40px;">
+        <h3 style="text-align: center; font-family: 'Times New Roman', Times, serif; color: #001f4d; text-shadow: 2px 2px 6px #222; font-size: 25px;">My Profile</h3>
+        <article>
+            <p>Halo, kenalin dulu saya Aquamarine Delvsonic, seorang gamer dan wibu yang sedang berusaha sebaik mungkin membuat codingan dengan baik dan benar. Saya minim pengalaman dan sedang belajar secara otodidak. Kedepannya, portofolio ini akan terus saya perbaiki setiap saya mampu dengan kemampuan yang saya pelajari dan mendapatkan sertifikat dengan kemampuan tersebut.</p>
+        </article>
+    </section>
+
+    <hr style="border: 1px solid #1b1a1a;" />
+
+    <section id="message-for-me" class="message-us" style="margin-top: 40px;">
+        <h3>Message for me</h3>
+        <form>
+            <label for="name">Name :</label>
+            <input type="text" id="name" name="name" required />
+            <br />
+
+            <label for="contact">Contact :</label>
+            <input type="text" id="contact" name="contact" required />
+            <br /><br />
+
+            <label for="message">Message :</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+            <br />
+
+            <button type="submit">Send</button>
+        </form>
+    </section>
+</main>
+
+<footer class="footer" style="text-align:center; padding:20px; background:#e0f7fa; border-radius:10px; margin-top:30px;">
+    <p style="font-size:1.1em; color:#00796b;">&#128049; Made with love by Aquamarine</p>
+</footer>
+
+</body>
+</html>
